@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            function calculate(){
+                var result;
+                var num1= parseInt(document.getElementById('number1').value);
+                var num2=parseInt(document.getElementById('number2').value);
+                var op=prompt("Please type operator","+");
+                if(op=="+"){
+                    result=addNumber(num1,num2);
+                }else if(op=="-"){
+                    result=subtractNumberr(num1,num2);
+                }
+               displayResult(result);
+                // result= parseInt(num1)+parseInt(num2);
+             
+            }
+          
+            function addNumber(num1,num2){
+                return num1+num2;
+            }
+            function subtractNumberr(num1,num2){
+                return num1-num2;
+            }
+            function multiplyNumber(num1,num2){
+                return num1*num2;
+            }
+            function displayResult(r){
+                document.getElementById('lblResult').innerHTML=r;
+            }
+            function clearData(){
+                var result=confirm("Are you sure want to clear?");
+                if(result==true){
+                    document.getElementById('number1').value="";
+                    document.getElementById('number2').value="";
+                    document.getElementById('lblResult').innerHTML="";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label>Number 1:</label><br>
+        <input type="text" id="number1" /><br>
+        <label>Number 2:</label><br />
+        <input type="number" id="number2" />
+        <h3 id="lblResult"></h3>
+        <button onclick="calculate()">Calculate</button> <button onclick="clearData()">Reset</button>
+    </body>
+</html>

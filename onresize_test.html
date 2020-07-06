@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>B&B Institute</title>
+</head>
+<body>
+    <h3>Make Bright your future at Best&Bright Institute</h3>
+    <p id="result"></p>
+    <script>
+        function displayWindowSize(){
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("result").innerHTML = txt;
+        }
+        window.onresize = displayWindowSize;
+    </script>
+    <p><strong>Note:</strong> Resize the browser window to see how the resize event works.</p>
+</body>
+</html>

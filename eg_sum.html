@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            function add(){
+                var num1= document.getElementById('number1').value;
+                var num2=document.getElementById('number2').value;
+                var result= parseInt(num1)+parseInt(num2);
+                document.getElementById('lblResult').innerHTML=result;
+            }
+            function subtract(){
+                var num1= document.getElementById('number1').value;
+                var num2=document.getElementById('number2').value;
+                var result= parseInt(num1)-parseInt(num2);
+                document.getElementById('lblResult').innerHTML=result;
+                alert('Your result is '+result);
+            }
+            function addNumber(num1,num2){
+                return num1+num2;
+            }
+            function subtractNumberr(num1,num2){
+                return num1-num2;
+            }
+            function multiplyNumber(num1,num2){
+                return num1*num2;
+            }
+            function clearData(){
+                var result=confirm("Are you sure want to clear?");
+                if(result==true){
+                    document.getElementById('number1').value="";
+                    document.getElementById('number2').value="";
+                    document.getElementById('lblResult').innerHTML="";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label>Number 1:</label><br>
+        <input type="text" id="number1" /><br>
+        <label>Number 2:</label><br />
+        <input type="number" id="number2" />
+        <h3 id="lblResult"></h3>
+        <button onclick="add()">+</button> <button onclick="subtract()">-</button><button onclick="clearData()">Reset</button>
+    </body>
+</html>
